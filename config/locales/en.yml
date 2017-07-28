@@ -21,3 +21,7 @@
 
 en:
   hello: "Hello world"
+  admin:
+    users:
+      index:
+        list_user: "List User"
