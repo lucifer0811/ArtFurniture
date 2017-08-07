@@ -1,0 +1,9 @@
+<td><%= count + 1 %></td>
+<td><%= user.name %></td>
+<td><%= user.email %></td>
+<td><%= user.address %></td>
+<td>
+  <%= link_to admin_user_path(user) do %>
+		<span class="glyphicon glyphicon-zoom-in show-user" ></span>
+	<% end %>
+</td>

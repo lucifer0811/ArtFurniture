@@ -1,0 +1,64 @@
+<div class="panel-imformation">
+  <div class="row title-imformation-user">
+    <div class="center title">
+      <h2><%= t ".user_imformation" %></h2>
+    </div>
+  </div>
+  <div class="row">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12 row">
+          <div class="form-group">
+            <%= f.label :avatar %>
+            <%= f.file_field :avatar %>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-6 col-xs-12 row">
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, class: "form-control" %>
+            
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :name %><br />
+            <%= f.text_field :name, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :phonenumber %><br />
+            <%= f.text_field :phonenumber, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :address %><br />
+            <%= f.text_field :address, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+            <%= f.password_field :password, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
+            <%= f.password_field :current_password, class: "form-control" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "Update", class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

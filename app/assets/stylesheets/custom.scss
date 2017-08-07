@@ -1,5 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 /* mixins, variables, etc. */
 
@@ -61,7 +63,7 @@ p {
 
 #logo {
   float: left;
-  margin-right: 10px;
+  margin-right: 150px;
   font-size: 1.7em;
   color: white;
   text-transform: uppercase;
@@ -97,5 +99,78 @@ footer {
       float: left;
       margin-left: 15px;
     }
+  }
+}
+
+#new_user {
+  .title_new_user {
+    border: 1px solid #e7e7e7;
+    background: #e7e7e7;
+  }
+  width: 450px;
+  height: auto;
+  background-color: #e7e7e7;
+  border: 1px ridge #e7e7e7;
+  margin: 3%;
+  margin-left: 350px;
+  padding: 3%;
+}
+
+.actions {
+  padding-top: 15px;
+}
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+.table {
+  border: 1px solid white;
+}
+
+.panel-imformation {
+  .title-imformation-user {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    margin: 20px;
+    .title {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 14px;
+    }
+  }
+
+  border: 1px solid #bce8f1;
+  padding-bottom: 15px;
+  .user-avatar {
+    padding-left: 35px;
   }
 }
