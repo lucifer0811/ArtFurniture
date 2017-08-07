@@ -174,3 +174,32 @@ footer {
     padding-left: 35px;
   }
 }
+
+.user-avatar {
+  padding-left: 20px;
+  margin-left: 40px;
+  margin-top: 80px;
+
+  .upload-preview {
+    height: 40px;
+    width: 40px;
+    padding-bottom: 50px;
+  }
+
+  .file-image {
+    width: 300px;
+    height: 250px;
+  }
+
+  .field-upload {
+    padding-top: 180px;
+  }
+}
+
+.avatar {
+  padding-left: 50px;
+}
+
+.imformation {
+  padding-left: 80px;
+}
