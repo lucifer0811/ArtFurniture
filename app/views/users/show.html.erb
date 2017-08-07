@@ -4,16 +4,16 @@
       <h2><%= t ".user_imformation" %></h2>
     </div>
   </div>
-  <div class="row user-imformation">
-    <div class="col-md-3 center user-avatar">
+  <div class="row">
+    <div class="col-md-3 row avatar">
       <% if @user.avatar.blank? %>
-        <%= image_tag "images.jpg", class: "img-responsive" %>
+        <%= image_tag "images.jpg", class: "img-responsive", size: 200 %>
       <% else %>
-        <%= image_tag @user.avatar, class: "img-responsive" %>
+        <%= image_tag @user.avatar, class: "img-responsive", size: 200 %>
       <% end %>
     </div>
-    <div class="col-md-9">
-      <table class="table table-hover">
+    <div class="col-md-9 row imformation">
+      <table class="table">
         <tbody>
           <tr>
             <td class="col-md-4"><strong><i class="fa fa-user-o"></i> Name</strong></td>
