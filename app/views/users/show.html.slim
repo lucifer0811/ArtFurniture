@@ -1,0 +1,43 @@
+.panel-imformation
+	.row.title-imformation-user
+		.center.title
+			h2 = t ".user_imformation"
+	.row
+		.col-md-3.row.avatar
+			- if @user.images.blank?
+				= image_tag "images.jpg"
+			- else
+				= image_tag @user.images.first.picture
+		.col-md-9.row.imformation
+			table.table
+				tbody
+					tr
+						td.col-md-4
+							strong
+								i.fa.fa-user-o Name
+						td.col-md-4
+							= @user.name
+					tr
+						td.col-md-4
+							strong
+								i.fa.fa-envelope-o Email
+						td.col-md-4
+							= @user.email
+					tr
+						td.col-md-4
+							strong
+								i.fa.fa-address-book Address
+						td.col-md-4
+							= @user.address
+					tr
+						td.col-md-4
+							strong
+								i.fa.fa-phone Phone
+						td.col-md-4
+							= @user.phonenumber
+					tr
+						td.col-md-4
+							strong
+								i.fa.fa-birthday-cake BirthDay
+						td.col-md-4
+							= @user.birth_day.to_date

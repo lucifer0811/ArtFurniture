@@ -11,7 +11,7 @@ namespace :db do
 			name: "Lucifer"
 
 		(1..10).each do
-			User.create(
+			user = User.create(
 				name: FFaker::Name.name,
 				email: FFaker::Internet.email,
 				password: 12345678,
@@ -19,6 +19,12 @@ namespace :db do
 				birth_day: FFaker::IdentificationESCO.expedition_date,
 				phonenumber: FFaker::PhoneNumber.phone_number
 			)
+			(1..5).each do
+				Post.create(
+					content: FFaker::Tweet.body,
+					user_id: user.id
+				)
+			end
 		end
 	end	
 end

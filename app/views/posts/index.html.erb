@@ -1,0 +1,9 @@
+<div id="content">
+	<%= render partial: 'post', collection: @posts %>
+</div>
+
+<% unless @posts.current_page == @posts.total_pages %>
+	<p id="view-more">
+		<%= link_to('View More', url_for(page: @posts.current_page + 1), remote: true) %>
+	</p>
+<% end %>

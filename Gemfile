@@ -23,12 +23,14 @@ gem "mini_magick"
 gem "mysql2", ">= 0.3.18", "< 0.5"
 gem "puma", "~> 3.0"
 gem "rails", "~> 5.0.4"
+gem "rails_best_practices"
+gem "slim-rails", "~> 3.1"
 gem "rubocop", ">= 0.35.0", require: false
 gem "rubocop-checkstyle_formatter", require: false
+gem "record_tag_helper", "~> 1.0"
 gem "sass-rails", "~> 5.0"
 gem "scss_lint", require: false
 gem "scss_lint_reporter_checkstyle", require: false
-gem "rails_best_practices"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "will_paginate", "~> 3.1.0"

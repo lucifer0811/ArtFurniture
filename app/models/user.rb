@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  mount_uploader :avatar, PictureUploader
   enum roles: %I[user admin]
+
+  has_many :images, as: :imageable, dependent: :destroy
+ 	accepts_nested_attributes_for :images, allow_destroy: true
 end
