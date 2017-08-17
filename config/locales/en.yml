@@ -23,5 +23,10 @@ en:
   hello: "Hello world"
   admin:
     users:
+      edit:
+        Update: Update
       index:
         list_user: "List User"
+  users:
+    edit:
+      Update: Update

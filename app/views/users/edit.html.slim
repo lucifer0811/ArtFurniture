@@ -1,0 +1,7 @@
+= t ".change_avatar"
+.row.form-group
+	= form_for @user do |f|
+		= f.fields_for :images do |t|
+			t.file_field :picture, class: "form-control"
+
+		= f.submit t(".Update")

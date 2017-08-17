@@ -1,0 +1,13 @@
+td
+	= count + 1
+td
+	= user.name
+td
+	= user.email
+td
+	= user.address
+td
+	= link_to admin_user_path(user) do
+		span.glyphicon.glyphicon-zoom-in.show-user
+	= link_to [:admin, user], method: :delete, remote: true, data: {confirm: "Are you sure #{user.name}"} do
+		span.glyphicon.glyphicon-trash

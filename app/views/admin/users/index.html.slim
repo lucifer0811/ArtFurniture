@@ -1,0 +1,18 @@
+h2 
+	= t ".list_user"
+table.table
+	thead
+		tr
+			th STT
+			th Name
+			th Email
+			th Address
+			th Action
+
+	tbody
+		- @users.each_with_index do |user, index|
+			tr
+				= render "user", user: user, count: index
+
+.center
+	= will_paginate @users, renderer: BootstrapPagination::Rails
