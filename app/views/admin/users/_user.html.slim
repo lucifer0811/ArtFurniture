@@ -11,3 +11,4 @@ td
 		span.glyphicon.glyphicon-zoom-in.show-user
 	= link_to [:admin, user], method: :delete, remote: true, data: {confirm: "Are you sure #{user.name}"} do
 		span.glyphicon.glyphicon-trash
+	= social_share_button_tag(user.name, allow_sites: %w(twitter facebook))

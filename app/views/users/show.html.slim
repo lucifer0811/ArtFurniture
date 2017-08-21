@@ -40,4 +40,7 @@
 							strong
 								i.fa.fa-birthday-cake BirthDay
 						td.col-md-4
-							= @user.birth_day.to_date
+							- if @user.birth_day.present?
+								= @user.birth_day.strftime('%F')
+							- else
+								= t ".have_fill_birth_day"
