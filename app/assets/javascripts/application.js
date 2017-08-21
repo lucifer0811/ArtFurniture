@@ -15,4 +15,7 @@
 //= require turbolinks
 //= require bootstrap
 //= require jquery.min.js
+//= require flipclock.min
+//= require timepiece
+//= require social-share-button
 //= require_tree .
